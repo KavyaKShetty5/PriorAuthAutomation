@@ -191,10 +191,14 @@ def write_prior_auth_dataset(records, output_path):
 
 
 def main():
-    data_dir = Path(__file__).resolve().parent.parent / 'Data'
-    wa_csv = data_dir / 'wa_data.csv'
-    cms_json = data_dir / 'cms_data.txt'
-    output_csv = data_dir / 'prior_authorization_dataset_wa_cms.csv'
+    base_dir = Path(__file__).resolve().parent.parent / 'Data'
+    raw_dir = base_dir / 'RawData'
+    clean_dir = base_dir / 'Clean_data'
+    clean_dir.mkdir(parents=True, exist_ok=True)
+
+    wa_csv = raw_dir / 'wa_data.csv'
+    cms_json = raw_dir / 'cms_data.txt'
+    output_csv = clean_dir / 'prior_authorization_dataset_wa_cms.csv'
 
     wa_rows = parse_wa_csv(wa_csv) if wa_csv.exists() else []
     cms_rows = parse_cms_json(cms_json) if cms_json.exists() else []

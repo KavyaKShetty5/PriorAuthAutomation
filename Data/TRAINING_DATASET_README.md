@@ -14,10 +14,9 @@
 ## Data Processing Pipeline
 
 ### 1. **Data Consolidation**
-   - Combined 3 CSV sources:
+   - Combined 2 CSV sources:
      - `cms_chunk_1.csv` (9,323 records)
      - `EHR_Dataset.csv` (1,447 records)
-     - `prior_authorization_dataset_2000.csv` (2,200 records)
 
 ### 2. **Data Cleaning**
    - Replaced 54,962 NA/null values with empty strings or imputed values

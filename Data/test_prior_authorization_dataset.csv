@@ -1,6 +1,0 @@
-Patient_ID,Encounter_ID,Age,Gender,Diagnosis_Code,Diagnosis_Description,Procedure_Code,Procedure_Description,Comorbidity_Count,Procedure_Cost,Insurance_Type,Provider_Type,Claim_Amount_Paid,Clinical_Notes,Severity_Level,Urgency_Level,Condition_Type,PA_Status,Submission_Type,Turnaround_Time,Encounter_Date
-P1,E1,77,Male,M54,Back Pain,CT,CT,3,27688,Medicaid,Hospital,15134,"Chronic disease, requires continuous monitoring",High,Urgent,Acute,Approved,Manual,1,22-03-2024
-P2,E2,70,Female,I10,Hypertension,Surgery,Surgery,2,14579,Private,Clinic,5884,Emergency case with acute complications,High,Urgent,Acute,Denied,Manual,5,09-11-2023
-P3,E3,63,Male,J45,Asthma,Surgery,Surgery,3,23556,Medicare,Clinic,20062,"Mild condition, routine follow-up recommended",Medium,Routine,Acute,Approved,Manual,67,15-11-2024
-P4,E4,76,Male,K21,GERD,CT,CT,3,43300,Medicaid,Clinic,21641,Patient shows severe symptoms and requires immediate attention,Medium,Urgent,Acute,Approved,Manual,3,13-07-2023
-P5,E5,88,Female,M54,Back Pain,X-Ray,X-Ray,3,1640,Medicaid,Clinic,1464,Patient shows severe symptoms and requires immediate attention,Low,Urgent,Acute,Approved,Manual,23,07-06-2023

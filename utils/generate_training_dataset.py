@@ -12,7 +12,7 @@ import csv
 import os
 from data_dictionary import STANDARD_HEADERS
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "Data")
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "Data", "Clean_data")
 COMBINED_FILE = os.path.join(DATA_DIR, "combined_data_source.csv")
 TRAINING_FILE = os.path.join(DATA_DIR, "synthetic_training_dataset.csv")
 

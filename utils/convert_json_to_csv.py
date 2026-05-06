@@ -54,8 +54,8 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--output', '-o',
-        default='Data/wa_data.csv',
-        help='Output CSV file path. Default: Data/wa_data.csv'
+        default='Data/RawData/wa_data.csv',
+        help='Output CSV file path. Default: Data/RawData/wa_data.csv'
     )
     args = parser.parse_args()
 

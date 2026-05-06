@@ -2,15 +2,17 @@ import csv
 import os
 from data_dictionary import STANDARD_HEADERS, COLUMN_MAPPING
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "Data")
-OUTPUT_FILE = os.path.join(DATA_DIR, "combined_data_source.csv")
+BASE_DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "Data")
+RAW_DATA_DIR = os.path.join(BASE_DATA_DIR, "RawData")
+CLEAN_DATA_DIR = os.path.join(BASE_DATA_DIR, "Clean_data")
+OUTPUT_FILE = os.path.join(CLEAN_DATA_DIR, "combined_data_source.csv")
+os.makedirs(CLEAN_DATA_DIR, exist_ok=True)
 
 # List CSV files to combine.
 # If you only want specific files, update this list.
 CSV_FILES = [
     "cms_chunk_1.csv",
     "EHR_Dataset.csv",
-    "prior_authorization_dataset_2000.csv",
 ]
 
 
@@ -65,9 +67,9 @@ def combine_csvs(files, output_path):
 
         total_rows = 0
         for file_name in files:
-            path = os.path.join(DATA_DIR, file_name)
+            path = os.path.join(RAW_DATA_DIR, file_name)
             if not os.path.exists(path):
-                print(f"Warning: {file_name} not found, skipping.")
+                print(f"Warning: {file_name} not found in RawData, skipping.")
                 continue
             
             print(f"Processing {file_name}...")
